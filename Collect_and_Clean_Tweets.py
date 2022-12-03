@@ -31,6 +31,8 @@ def create_full_data_frame(query, limit):
     df = create_col_of_compound_sentiment_scores(df)
     df = create_col_of_labels_for_tweet_sentiment(df)
     df = drop_neutral_tweets(df)
+    df = remove_top_5_users(df)
+    df['Date'] = pd.to_datetime(df['Date'])
     return df
 
 #https://www.youtube.com/watch?v=jtIMnmbnOFo
@@ -85,7 +87,13 @@ def omit_short_tweets(dataframe):
             idx_to_drop.append(index)
     dataframe = dataframe.drop(idx_to_drop)
     return dataframe
-#--------------------------------------------------------------------------
+#-------------------------Remove top five users with most posts-------------------------------------------------
+def remove_top_5_users(df):
+    users = df.groupby(['User']).size().sort_values(ascending=False).head(5)
+    list_users = list(users.index.values)
+    indxs = df[df['User'].isin(list_users)].index
+    df.drop(indxs)
+    return df
 #----------------sentiment analysis columns------------------------------- 
 def NLTK_sentiment_analysis_col(tweet):
     tweet = str(tweet)
