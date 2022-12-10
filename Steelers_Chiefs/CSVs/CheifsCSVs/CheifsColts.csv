@@ -1,0 +1,12 @@
+,ID,Date,User,Tweet,HashTags,Likes,Retweets,MentionUsers,LocationCoordinates,clean_Tweet,Sentiment_Analysis,Positive_Sentiment,Compound_Sentiment Score
+0,1574490194740396033,2022-09-26 20:04:49+00:00,LTeeSA6,"Chilled bar 
+#cheifs #torychaos #HouseOfTheDragonHBO #Eskom #FuelTomorrow https://t.co/NkGFSrtysE","['cheifs', 'torychaos', 'HouseOfTheDragonHBO', 'Eskom', 'FuelTomorrow']",1,0,,,chilled bar,"{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}",False,0.0
+1,1574370014030864387,2022-09-26 12:07:16+00:00,gabed95,Fan of the nfl and you want to talk about what the hell happened this week? Tune in to our show at 12pm eastern standard time on #twitch! #nfl #sport #Eagles #cheifs #Dolphins,"['twitch', 'nfl', 'sport', 'Eagles', 'cheifs', 'Dolphins']",2,0,,,fan nfl you want talk about what hell happened this week tune our show at 12pm eastern standard time,"{'neg': 0.19, 'neu': 0.661, 'pos': 0.149, 'compound': -0.4588}",False,-0.4588
+2,1574240202968559616,2022-09-26 03:31:27+00:00,dawg_kdot,"Takeaways from today’s #NFL 
+•@Lj_era8 Lamar Jackson is playing at a high level and needs more praise #MVP
+
+•#Cheifs vs #Cokts was rigged
+
+•#Jalen #Hurts decision making has improved and the efficiency is showing. 
+
+•#Aaron #Rodgers will get it done in the regular season.","['NFL', 'MVP', 'Cheifs', 'Cokts', 'Jalen', 'Hurts', 'Aaron', 'Rodgers']",0,0,"[User(username='Lj_era8', id=2157497975, displayname='Lamar Jackson', description=None, rawDescription=None, descriptionUrls=None, verified=None, created=None, followersCount=None, friendsCount=None, statusesCount=None, favouritesCount=None, listedCount=None, mediaCount=None, location=None, protected=None, linkUrl=None, linkTcourl=None, profileImageUrl=None, profileBannerUrl=None, label=None)]",,takeaways today s lamar jackson is playing at high level needs more praise vs was rigged decision making has improved efficiency is showing will get it done regular season,"{'neg': 0.068, 'neu': 0.625, 'pos': 0.307, 'compound': 0.8313}",True,0.8313
