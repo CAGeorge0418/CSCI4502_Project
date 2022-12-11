@@ -21,6 +21,8 @@ from nltk.corpus import stopwords
 sia_nltk = nltk_sia()
 #sia_vader = vader_sia()
 stopwords = set(stopwords.words('english'))
+exclude = ['no','down',"not","can",'over','under','above','won']
+stopwords = [s for s in stopwords if s not in exclude]
 
 def create_full_data_frame(query, limit):
     df = scrape(query, limit)
@@ -60,7 +62,7 @@ def clean_tweet(tweet):
     temp = re.sub('\[.*?\]',' ', temp)
     temp = re.sub("[^a-z0-9]"," ", temp)
     temp = temp.split()
-    temp = [w for w in temp if not w in stopwords]#rmove stop words
+    temp = [w for w in temp if not w in stopwords]#remove stop words
     temp = " ".join(word for word in temp)
     return temp
 
